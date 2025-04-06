@@ -1,197 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Little Flower High School</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Inter', sans-serif;
+      background-image: url('images/logo.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-attachment: fixed;
+    }
+    html {
       scroll-behavior: smooth;
     }
-    header {
-      background-image: url('images/background.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-      position: relative;
-    }
-    header .school-title {
-      font-size: 48px;
-      font-weight: bold;
-    }
-    .dark-blue { color: darkblue; }
-    .light-blue { color: lightblue; }
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #fff;
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .facilities, .features, .blog-posts, .gallery, .contact {
-      display: grid;
-      gap: 20px;
-    }
-    .facilities img, .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-    #backToTop {
+    .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      background: #007BFF;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
-      cursor: pointer;
-      display: none;
+      z-index: 1000;
+    }
+    .flashing-text {
+      animation: flash 2s infinite ease-in-out;
+    }
+    @keyframes flash {
+      0%, 100% { color: #fff; text-shadow: 0 0 10px orange; }
+      50% { color: #ff9900; text-shadow: 0 0 20px #ff9900; }
     }
   </style>
 </head>
+<body class="bg-white bg-opacity-90 text-gray-900">
 
-<body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#admissions">Admissions</a>
-    <a href="#facilities">Facilities</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <header>
-    <div class="school-title">
-      <span class="dark-blue">LITTLE FLOWER</span> <span class="light-blue">HIGH SCHOOL</span>
+  <!-- Header with Side Images -->
+  <header class="bg-orange-600 text-white py-10 shadow-lg" id="home">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+      <img src="images/students.jpg" alt="Students" class="hidden md:block w-60 h-60 rounded-lg shadow-lg object-cover">
+      <div class="text-center">
+        <img src="images/logo.jpg" alt="School Logo" class="mx-auto w-32 h-32 mb-4 object-cover rounded-full border-4 border-white shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-bold flashing-text">
+          <span class="text-blue-900">LITTLE FLOWER</span> <span class="text-blue-400">HIGH SCHOOL</span>
+        </h1>
+        <p class="mt-2 text-lg italic">"Blossoming Bright Futures with Values and Knowledge"</p>
+      </div>
+      <img src="images/students2.jpg" alt="Students" class="hidden md:block w-60 h-60 rounded-lg shadow-lg object-cover">
     </div>
   </header>
 
-  <section id="about" data-aos="fade-up">
-    <h2>About Us</h2>
-    <p>Established in 2007, Little Flower High School aims to provide high-quality education at low cost, focusing on underprivileged children who are eager to learn but lack access to facilities. While other schools charge heavily for computer labs, robotics, AI, sports, libraries, karate, and Islamic education — we provide all of them affordably. Our features include:</p>
-    <ul>
-      <li>Highly qualified teachers</li>
-      <li>Personal attention to children</li>
-      <li>Digital learning and spoken English</li>
-      <li>Monthly PTMs</li>
-      <li>Affordable fee structure</li>
-      <li>Soft skills programs</li>
+  <!-- Navbar -->
+  <nav class="bg-orange-500 text-white sticky top-0 z-50 shadow">
+    <ul class="flex justify-center space-x-6 py-3 font-semibold">
+      <li><a href="#home" class="hover:underline">Home</a></li>
+      <li><a href="#about" class="hover:underline">About</a></li>
+      <li><a href="#facilities" class="hover:underline">Facilities</a></li>
+      <li><a href="#gallery" class="hover:underline">Gallery</a></li>
+      <li><a href="#blog" class="hover:underline">Blog</a></li>
+      <li><a href="#contact" class="hover:underline">Contact</a></li>
     </ul>
-  </section>
+  </nav>
 
-  <section id="admissions" data-aos="fade-up">
-    <h2>Admissions</h2>
-    <p>Admissions are open for all grades. We welcome children from all backgrounds who are eager to learn. Scholarships are available for meritorious and needy students. Visit our campus or contact us for more details.</p>
-  </section>
-
-  <section id="facilities" class="facilities" data-aos="fade-up">
-    <h2>Our Facilities</h2>
-    <ul>
-      <li>Computer Labs with AI & Robotics</li>
-      <li>Islamic Education</li>
-      <li>Karate Coaching</li>
-      <li>Sports Ground</li>
-      <li>Library</li>
-      <li>Digital Classrooms</li>
-    </ul>
-  </section>
-
-  <section id="gallery" class="gallery" data-aos="fade-up">
-    <h2>Gallery</h2>
-    <img src="images/classroom.jpg" alt="Classroom">
-    <img src="images/computer-lab.jpg" alt="Computer Lab">
-    <img src="images/sports-ground.jpg" alt="Sports Ground">
-    <img src="images/library.jpg" alt="Library">
-    <img src="images/namaz.jpg" alt="Islamic Education">
-    <img src="images/low-cost.jpg" alt="Low Cost Education">
-  </section>
-
-  <section id="blog" class="blog-posts" data-aos="fade-up">
-    <h2>Our Blog</h2>
-    <article>
-      <h3>Haritha Haram - Green Drive (15th Nov 2024)</h3>
-      <p>On 15th Nov, we organized a plantation drive under Haritha Haram to promote environmental awareness. Students and teachers planted trees and pledged to protect the green cover.</p>
-    </article>
-    <article>
-      <h3>Why Education is Important</h3>
-      <p>In today's competitive world, education empowers individuals, opens up opportunities, and helps create a more equitable society. It's the foundation of progress.</p>
-    </article>
-    <article>
-      <h3>Role of Parents in Education</h3>
-      <p>Parents play a crucial role in the educational journey of children. From providing moral support to helping with studies, their involvement makes a huge impact.</p>
-    </article>
-  </section>
-
-  <section id="contact" class="contact" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <p><strong>Address:</strong> Dargah Pahad, Chintalmet, Hyderabad, Telangana, 500048</p>
-    <p><strong>Email:</strong> infoduaa@gmail.com</p>
-    <p><strong>Phone:</strong> +91-9502801171, +91-9989483293</p>
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6515.818860934065!2d78.420585!3d17.347727!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb973f5faa8b0d%3A0xa057505e8fd4c493!2sDuaa%20The%20Global%20Schools!5e1!3m2!1sen!2sin!4v1686799337823!5m2!1sen!2sin"
-      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 LITTLE FLOWER HIGH SCHOOL</p>
-    <div id="visitor-counter">
-      Site Visits: <span id="visitCount">900</span>
+  <!-- About Section -->
+  <section id="about" class="py-12 px-6 md:px-20 bg-orange-50">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-700 mb-4">About Us</h2>
+      <p class="text-lg text-gray-800 leading-relaxed">
+        Established in 2007 with the vision to provide high-quality education at low cost, we focus on underprivileged children who have the eagerness to learn but lack resources. Unlike schools that charge high fees for basic facilities, we offer access to modern amenities such as computer labs, AI-integrated robotics, sports grounds, libraries, karate training, and Islamic education — all at an affordable cost.
+      </p>
+      <ul class="mt-6 text-left text-lg text-green-800 space-y-2">
+        <li>✅ Highly Qualified Teachers</li>
+        <li>✅ Personal Attention to Children</li>
+        <li>✅ Digital Learning & Spoken English</li>
+        <li>✅ Monthly PTMs & Soft Skill Programs</li>
+        <li>✅ Affordable Fee Structure</li>
+      </ul>
     </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section id="facilities" class="py-12 bg-white bg-opacity-90 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-700 mb-8">Facilities Offered</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-orange-100 p-4 rounded-lg shadow-md">
+          <img src="images/classroom.jpg" alt="Classroom" class="rounded mb-3 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold text-orange-800 mb-1">🏫 Classrooms</h3>
+          <p class="text-gray-700">Engaging, interactive, and child-friendly classrooms.</p>
+        </div>
+        <div class="bg-orange-100 p-4 rounded-lg shadow-md">
+          <img src="images/computer-lab.jpg" alt="Computer Lab" class="rounded mb-3 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold text-orange-800 mb-1">💻 Computer Lab</h3>
+          <p class="text-gray-700">State-of-the-art digital learning and AI-based tools.</p>
+        </div>
+        <div class="bg-orange-100 p-4 rounded-lg shadow-md">
+          <img src="images/sports.jpg" alt="Sports Ground" class="rounded mb-3 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold text-orange-800 mb-1">🏏 Sports Ground</h3>
+          <p class="text-gray-700">Promoting physical development through regular sports.</p>
+        </div>
+        <div class="bg-orange-100 p-4 rounded-lg shadow-md">
+          <img src="images/library.jpg" alt="Library" class="rounded mb-3 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold text-orange-800 mb-1">📖 Library</h3>
+          <p class="text-gray-700">A hub of knowledge with academic and story books.</p>
+        </div>
+        <div class="bg-orange-100 p-4 rounded-lg shadow-md">
+          <img src="images/namaz.jpg" alt="Namaz Room" class="rounded mb-3 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold text-orange-800 mb-1">🕌 Namaz Room</h3>
+          <p class="text-gray-700">Dedicated space for prayer and spiritual growth.</p>
+        </div>
+        <div class="bg-orange-100 p-4 rounded-lg shadow-md">
+          <img src="images/islamic-education.jpg" alt="Islamic Education" class="rounded mb-3 w-full h-48 object-cover">
+          <h3 class="text-xl font-semibold text-orange-800 mb-1">🕋 Islamic Education</h3>
+          <p class="text-gray-700">Moral and religious education with cultural values.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="bg-orange-50 py-12 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-700 mb-6">Gallery</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="images/classroom.jpg" class="rounded shadow-md" alt="Classroom" />
+        <img src="images/computer-lab.jpg" class="rounded shadow-md" alt="Computer Lab" />
+        <img src="images/sports.jpg" class="rounded shadow-md" alt="Sports Ground" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="bg-white py-12 px-6 md:px-20">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-700 mb-6">Our Blog</h2>
+      <div class="space-y-6 text-left">
+        <div>
+          <h3 class="text-xl font-bold text-green-700">🌱 Haritha Haram - Green Day (Nov 15, 2024)</h3>
+          <p class="text-gray-800">Our students actively participated in the state-wide Haritha Haram plantation drive by planting over 100 saplings within and around the school premises. A step toward a greener tomorrow!</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-green-700">📚 Importance of Education</h3>
+          <p class="text-gray-800">Education empowers individuals, opens doors to opportunities, and uplifts communities. In today's fast-paced world, being educated is essential to succeed and adapt to changing environments.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-green-700">👨‍👩‍👧‍👦 Role of Parents in Education</h3>
+          <p class="text-gray-800">Parental involvement plays a crucial role in a child's academic journey. From moral support to active participation in school activities, parents help shape their child's future success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-12 px-6 md:px-20 bg-orange-100">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-700 mb-4">Contact Us</h2>
+      <div class="w-full h-96 mb-4 rounded overflow-hidden shadow-lg">
+        <iframe src="https://www.google.com/maps/embed?..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <p class="mb-2 text-xl">📞 <a href="tel:+919347179694">+91 93471 79694</a></p>
+      <p class="mb-4 text-xl">✉️ <a href="mailto:lfhsch2024@gmail.com">lfhsch2024@gmail.com</a></p>
+      <form class="space-y-4 text-left">
+        <input type="text" placeholder="Your Name" class="w-full border border-gray-300 p-2 rounded" required>
+        <input type="email" placeholder="Your Email" class="w-full border border-gray-300 p-2 rounded" required>
+        <textarea placeholder="Your Message" rows="4" class="w-full border border-gray-300 p-2 rounded" required></textarea>
+        <button type="submit" class="bg-orange-600 text-white px-6 py-2 rounded hover:bg-orange-700">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/919347179694" class="whatsapp-float" target="_blank">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+  </a>
+
+  <!-- Footer with Site Visitor Counter -->
+  <footer class="bg-orange-600 text-white text-center py-6 mt-12">
+    <p>&copy; 2025 Little Flower High School | Designed by Balkhis Web Solutions</p>
+    <p class="mt-2">👁️ Site Visitors: <span id="visitorCount">900</span></p>
   </footer>
 
-  <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init();
-
-    let visitCount = localStorage.getItem("visitCount") || 900;
-    visitCount++;
-    document.getElementById("visitCount").innerText = visitCount;
-    localStorage.setItem("visitCount", visitCount);
-
-    window.onscroll = () => {
-      document.getElementById("backToTop").style.display = window.scrollY > 200 ? 'block' : 'none';
-    }
+    // Visitor Counter Starting from 900
+    let count = localStorage.getItem('lfhs-visitor-count') || 900;
+    count++;
+    document.getElementById('visitorCount').textContent = count;
+    localStorage.setItem('lfhs-visitor-count', count);
   </script>
 </body>
-
 </html>
