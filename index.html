@@ -30,19 +30,29 @@
     }
   </style>
 </head>
-<body class="bg-white bg-opacity-80 text-gray-900 flex">
+<body class="bg-white bg-opacity-80 text-gray-900">
 
-  <!-- Side Images -->
-  <div class="hidden md:block w-24 bg-cover bg-center" style="background-image: url('images/students.jpg');"></div>
+  <!-- Header with Side Images -->
+  <header class="bg-orange-600 text-white py-10 shadow-lg">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+      
+      <!-- Left Image -->
+      <img src="images/students.jpg" alt="Students" class="hidden md:block w-32 h-32 rounded-lg shadow-lg object-cover">
 
-  <main class="flex-1">
+      <!-- Center Logo & Title -->
+      <div class="text-center">
+        <img src="images/logo.jpg" alt="School Logo" class="mx-auto w-32 h-32 mb-4 object-cover rounded-full border-4 border-white shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-bold flashing-text">Little Flower High School</h1>
+        <p class="mt-2 text-lg italic">"Blossoming Bright Futures with Values and Knowledge"</p>
+      </div>
 
-    <!-- Header with Logo -->
-    <header class="bg-orange-600 text-white py-10 text-center shadow-lg">
-      <img src="images/logo.jpg" alt="School Logo" class="mx-auto w-32 h-32 mb-4 object-cover rounded-full border-4 border-white shadow-lg">
-      <h1 class="text-4xl md:text-5xl font-bold flashing-text">Little Flower High School</h1>
-      <p class="mt-2 text-lg italic">"Blossoming Bright Futures with Values and Knowledge"</p>
-    </header>
+      <!-- Right Image -->
+      <img src="images/students2.jpg" alt="Students" class="hidden md:block w-32 h-32 rounded-lg shadow-lg object-cover">
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
 
     <!-- Director’s Mission -->
     <section class="bg-orange-50 bg-opacity-90 py-12 px-6 md:px-20">
@@ -117,7 +127,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <img src="images/classroom.jpg" alt="Classroom" class="rounded shadow-md">
           <img src="images/computer-lab.jpg" alt="Computer Lab" class="rounded shadow-md">
-          <img src="images/sports-ground.jpg" alt="Sports Ground" class="rounded shadow-md">
+          <img src="images/sports.jpg" alt="Sports Ground" class="rounded shadow-md">
         </div>
       </div>
     </section>
@@ -166,9 +176,7 @@
     <footer class="bg-orange-600 text-white text-center py-6 mt-12">
       <p>&copy; 2025 Little Flower High School | Designed by Balkhis Web Solutions</p>
     </footer>
-  </main>
 
-  <!-- Right Side Image -->
-  <div class="hidden md:block w-24 bg-cover bg-center" style="background-image: url('images/student1.jpg');"></div>
+  </main>
 </body>
 </html>
