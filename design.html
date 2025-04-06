@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Little Flower High School - Modern UI</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .glow-text {
+      text-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00;
+    }
+    .glow-blue {
+      text-shadow: 0 0 10px #00f, 0 0 20px #00f;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    .parallax-bg {
+      background-attachment: fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="h-screen parallax-bg bg-center" style="background-image: url('school-bg.jpg');">
+    <div class="flex flex-col justify-center items-center h-full bg-black bg-opacity-50 text-white text-center">
+      <h1 class="text-5xl font-bold glow-text text-red-600">LITTLE FLOWER</h1>
+      <h2 class="text-4xl glow-blue text-blue-400 mt-2">HIGH SCHOOL</h2>
+      <p class="mt-4 text-lg font-light">Established: 2007 | Recognised by Govt. of Telangana</p>
+      <p class="text-md font-light">Run by Doctors, Educationists & NRIs</p>
+      <a href="#mission" class="mt-8 text-white animate-bounce">▼ Scroll Down</a>
+    </div>
+  </section>
+
+  <!-- Sticky Navbar -->
+  <header class="sticky top-0 z-50 bg-white shadow">
+    <nav class="flex justify-between items-center px-4 py-3">
+      <h1 class="text-xl font-bold text-blue-800">LFHS</h1>
+      <ul class="hidden md:flex space-x-6 font-semibold">
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#facilities">Facilities</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#location">Location</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Director's Message -->
+  <section id="mission" class="py-16 bg-gradient-to-r from-blue-50 to-blue-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-blue-900">Director's Message</h2>
+      <p class="max-w-3xl mx-auto text-lg">Our mission is to provide high-quality, affordable education to underprivileged children, empowering them to lead successful and fulfilling lives.</p>
+    </div>
+  </section>
+
+  <!-- Facilities -->
+  <section id="facilities" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Facilities Offered</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="glass-card p-4">💻 Computer Classes</div>
+        <div class="glass-card p-4">🤖 Robotics</div>
+        <div class="glass-card p-4">🏃‍♂️ Sports</div>
+        <div class="glass-card p-4">💰 Low-Cost Education</div>
+        <div class="glass-card p-4">🏫 Classrooms</div>
+        <div class="glass-card p-4">📚 Library</div>
+        <div class="glass-card p-4">🥋 Karate</div>
+        <div class="glass-card p-4">🚌 GPS-Tracked Transport</div>
+        <div class="glass-card p-4">🕌 Islamic Education</div>
+        <div class="glass-card p-4">🧭 Educational Field Trips</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admissions Section -->
+  <section id="admissions" class="py-16 bg-green-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-green-800 mb-4">Admissions 2025–26</h2>
+      <p class="text-lg max-w-2xl mx-auto">We are now accepting applications for the upcoming academic year. Our school offers quality education, personal attention, spoken English, soft skills, and digital learning — all at an affordable fee structure.</p>
+      <button class="mt-6 px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">Apply Now</button>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-8 text-blue-800">Gallery</h2>
+      <div class="overflow-hidden relative h-96">
+        <div id="slider" class="flex w-[1600%] animate-slide">
+          <img src="std1.jpg" class="w-full object-cover" />
+          <img src="std2.jpg" class="w-full object-cover" />
+          <img src="std3.jpg" class="w-full object-cover" />
+          <img src="std4.jpg" class="w-full object-cover" />
+          <img src="std5.jpg" class="w-full object-cover" />
+          <img src="std6.jpg" class="w-full object-cover" />
+          <img src="std7.jpg" class="w-full object-cover" />
+          <img src="std8.jpg" class="w-full object-cover" />
+          <img src="std9.jpg" class="w-full object-cover" />
+          <img src="std10.jpg" class="w-full object-cover" />
+          <img src="std11.jpg" class="w-full object-cover" />
+          <img src="std12.jpg" class="w-full object-cover" />
+          <img src="std13.jpg" class="w-full object-cover" />
+          <img src="std14.jpg" class="w-full object-cover" />
+          <img src="std15.jpg" class="w-full object-cover" />
+          <img src="std16.jpg" class="w-full object-cover" />
+        </div>
+      </div>
+    </div>
+    <style>
+      @keyframes slide {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-87.5%); }
+      }
+      #slider {
+        animation: slide 40s linear infinite;
+      }
+    </style>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-blue-900">Contact Us</h2>
+      <form class="max-w-xl mx-auto grid grid-cols-1 gap-4">
+        <input type="text" placeholder="Your Name" class="p-3 border rounded-lg" required>
+        <input type="email" placeholder="Email" class="p-3 border rounded-lg" required>
+        <textarea rows="4" placeholder="Message" class="p-3 border rounded-lg"></textarea>
+        <button class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4 text-blue-800">Find Us on Google Maps</h2>
+      <div class="mb-4">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12..." width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <a href="https://www.google.com/search?q=little+flower+high+school+reviews" target="_blank" class="text-blue-600 underline">Read our Google Reviews</a>
+    </div>
+  </section>
+
+</body>
+
+</html>
