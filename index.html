@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,208 +9,180 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      background-image: url('images/logo.jpg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: top center;
-      background-attachment: fixed;
+      background-color: white;
     }
-
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
       right: 20px;
       z-index: 1000;
     }
-
     .flashing-text {
       animation: flash 2s infinite ease-in-out;
     }
-
     @keyframes flash {
-      0%,
-      100% {
-        text-shadow: 0 0 10px orange;
-      }
-
-      50% {
-        text-shadow: 0 0 20px #ff9900;
-      }
+      0%, 100% { text-shadow: 0 0 10px orange; }
+      50% { text-shadow: 0 0 20px #ff9900; }
+    }
+    .carousel img {
+      display: none;
+    }
+    .carousel img.active {
+      display: block;
     }
   </style>
 </head>
+<body class="text-gray-900 scroll-smooth">
 
-<body class="bg-white bg-opacity-90 text-gray-900">
-  <!-- Header -->
-  <header class="bg-white py-10 shadow-lg">
-    <div class="flex flex-col md:flex-row items-center justify-center gap-6">
-      <img src="images/students.jpg" alt="Students" class="hidden md:block w-60 h-60 rounded-lg shadow-lg object-cover">
-      <div class="text-center">
-        <img src="images/logo.jpg" alt="School Logo" class="mx-auto w-32 h-32 mb-4 object-cover rounded-full border-4 border-white shadow-lg">
-        <h1 class="text-4xl md:text-5xl font-bold flashing-text">
-          <span class="text-blue-900">LITTLE FLOWER</span> <span class="text-sky-400">HIGH SCHOOL</span>
-        </h1>
-        <p class="mt-2 text-lg italic">"Blossoming Bright Futures with Values and Knowledge"</p>
-      </div>
-      <img src="images/students2.jpg" alt="Students" class="hidden md:block w-60 h-60 rounded-lg shadow-lg object-cover">
+  <!-- Sticky Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-900">LITTLE FLOWER <span class="text-sky-400">HIGH SCHOOL</span></h1>
+      <ul class="flex gap-4 font-semibold text-sm md:text-base">
+        <li><a href="#mission" class="hover:text-orange-600">Mission</a></li>
+        <li><a href="#facilities" class="hover:text-orange-600">Facilities</a></li>
+        <li><a href="#admissions" class="hover:text-orange-600">Admissions</a></li>
+        <li><a href="#gallery" class="hover:text-orange-600">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-orange-600">Contact</a></li>
+        <li><a href="#location" class="hover:text-orange-600">Location</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="py-10 bg-white text-center">
+    <img src="images/logo.jpg" alt="School Logo" class="mx-auto w-32 h-32 object-cover rounded-full border-4 border-white shadow-lg">
+    <h1 class="text-4xl md:text-5xl font-bold flashing-text">
+      <span class="text-blue-900">LITTLE FLOWER</span> <span class="text-sky-400">HIGH SCHOOL</span>
+    </h1>
+    <p class="mt-2 text-lg italic">"Blossoming Bright Futures with Values and Knowledge"</p>
+    <p class="mt-2 text-sm text-gray-700 font-semibold">Established: 2007 | Recognised by Govt. of Telangana | Run by Doctors, Educationists & NRIs</p>
   </header>
 
-  <main>
-    <!-- Director's Mission -->
-    <section class="bg-orange-50 py-12 px-6 md:px-20">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-orange-700 mb-4">Director’s Mission</h2>
-        <p class="text-2xl text-green-800 leading-relaxed">
-          “To provide affordable yet high-quality education that shapes well-rounded individuals. Through access to modern computer labs, dedicated sports areas, a well-stocked library, a Namaz room, and Islamic education — we ensure every child, regardless of background, receives the tools to thrive academically, spiritually, and socially.”
-        </p>
-        <p class="mt-4 text-3xl text-orange-600 font-semibold">– S.A. Patel (Director)</p>
+  <!-- Director's Mission -->
+  <section id="mission" class="bg-orange-50 py-12 px-6 md:px-20">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-700 mb-4">Director’s Mission</h2>
+      <p class="text-xl text-green-800">“To provide affordable yet high-quality education... tools to thrive academically, spiritually, and socially.”</p>
+      <p class="mt-4 text-2xl text-orange-600 font-semibold">– S.A. Patel (Director)</p>
+    </div>
+  </section>
+
+  <!-- Facilities Section -->
+  <section id="facilities" class="py-12 bg-white px-6 md:px-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-700 mb-8">Facilities Offered</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Add each facility item with appropriate image -->
+        <div class="bg-orange-100 p-4 rounded shadow"><img src="images/computer-lab.jpg" class="w-full h-40 object-cover rounded mb-2"><h3 class="font-semibold">💻 Computer Classes</h3></div>
+        <div class="bg-orange-100 p-4 rounded shadow"><img src="images/robotics.jpg" class="w-full h-40 object-cover rounded mb-2"><h3 class="font-semibold">🤖 Robotics</h3></div>
+        <div class="bg-orange-100 p-4 rounded shadow"><img src="images/sports.jpg" class="w-full h-40 object-cover rounded mb-2"><h3 class="font-semibold">🏏 Sports</h3></div>
+        <div class="bg-orange-100 p-4 rounded shadow"><img src="images/low-cost.jpg" class="w-full h-40 object-cover rounded mb-2"><h3 class="font-semibold">💰 Low-cost Education</h3></div>
+        <div class="bg-orange-100 p-4 rounded shadow"><img src="images/classroom.jpg" class="w-full h-40 object-cover rounded mb-2"><h3 class="font-semibold">🏫 Classrooms</h3></div>
+        <div class="bg-orange-100 p-4 rounded shadow"><img src="images/library.jpg" class="w-full h-40 object-cover rounded mb-2"><h3 class="font-semibold">📚 Library</h3></div>
+        <div class="bg-orange-100 p-4 rounded shadow"><img src="images/karate.jpg" class="w-full h-40 object-cover rounded mb-2"><h3 class="font-semibold">🥋 Karate</h3></div>
+        <div class="bg-orange-100 p-4 rounded shadow"><img src="images/bus.jpg" class="w-full h-40 object-cover rounded mb-2"><h3 class="font-semibold">🚌 GPS Transport</h3></div>
+        <div class="bg-orange-100 p-4 rounded shadow"><img src="images/islamic-education.jpg" class="w-full h-40 object-cover rounded mb-2"><h3 class="font-semibold">🕋 Islamic Education</h3></div>
+        <div class="bg-orange-100 p-4 rounded shadow"><img src="images/field-trip.jpg" class="w-full h-40 object-cover rounded mb-2"><h3 class="font-semibold">🎒 Educational Trips</h3></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Facilities -->
-    <section class="py-12 px-6 md:px-20 bg-white">
-      <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-orange-700 mb-8">Facilities Offered</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="bg-orange-100 p-4 rounded-lg shadow-md">
-            <img src="images/classroom.jpg" alt="Classroom" class="rounded mb-3 w-full h-48 object-cover">
-            <h3 class="text-xl font-semibold text-orange-800 mb-1">🏫 Classrooms</h3>
-            <p class="text-gray-700">Well-ventilated, engaging learning environments.</p>
-          </div>
-
-          <div class="bg-orange-100 p-4 rounded-lg shadow-md">
-            <img src="images/computer-lab.jpg" alt="Computer Lab" class="rounded mb-3 w-full h-48 object-cover">
-            <h3 class="text-xl font-semibold text-orange-800 mb-1">💻 Computer Lab</h3>
-            <p class="text-gray-700">Modern computer facilities to enhance digital learning skills.</p>
-          </div>
-
-          <div class="bg-orange-100 p-4 rounded-lg shadow-md">
-            <img src="images/library.jpg" alt="Library" class="rounded mb-3 w-full h-48 object-cover">
-            <h3 class="text-xl font-semibold text-orange-800 mb-1">📚 Library</h3>
-            <p class="text-gray-700">A wide range of academic and motivational books.</p>
-          </div>
-
-          <div class="bg-orange-100 p-4 rounded-lg shadow-md">
-            <img src="images/karate.jpg" alt="Karate" class="rounded mb-3 w-full h-48 object-cover">
-            <h3 class="text-xl font-semibold text-orange-800 mb-1">🥋 Karate</h3>
-            <p class="text-gray-700">Martial arts training to build discipline and fitness.</p>
-          </div>
-
-          <div class="bg-orange-100 p-4 rounded-lg shadow-md">
-            <img src="images/robotics.jpg" alt="Robotics" class="rounded mb-3 w-full h-48 object-cover">
-            <h3 class="text-xl font-semibold text-orange-800 mb-1">🤖 Robotics</h3>
-            <p class="text-gray-700">Hands-on STEM learning with real-world applications.</p>
-          </div>
-        </div>
+  <!-- Admissions Section -->
+  <section id="admissions" class="bg-green-50 py-12 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-green-700 mb-6 text-center">Admissions 2025–26</h2>
+      <p class="text-center text-lg font-semibold mb-4">Admissions open from Nursery to Class X | No Donation | Free Admission</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <ul class="space-y-2 text-gray-800">
+          <li>✅ Free Uniform for First 100 Admissions</li>
+          <li>✅ Free Health Consultant</li>
+          <li>✅ IIT/Medical Foundation Classes from Class 6</li>
+          <li>✅ Modern Education with Islamic Studies</li>
+          <li>✅ Hifz Course for interested students</li>
+          <li>✅ Spoken English for Parents</li>
+        </ul>
+        <ul class="space-y-2 text-gray-800">
+          <li>✅ Monthly Events & Competitions</li>
+          <li>✅ CCE Methodology</li>
+          <li>✅ Summer Crash Courses</li>
+          <li>✅ Workshops on Parenting</li>
+          <li>✅ Deeniyath from Class 1</li>
+          <li>✅ Digital AV Rooms, Computer & Science Labs</li>
+        </ul>
       </div>
-    </section>
-
-    <!-- Admissions 2025–26 -->
-    <section class="py-12 px-6 md:px-20 bg-orange-50">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-4xl font-bold text-orange-700 text-center mb-6">Admissions 2025–26</h2>
-        <div class="text-center mb-6">
-          <p class="text-xl font-semibold">"To Be Best You Must Learn From The Best"</p>
-          <p>Established: 2007 | Recognised by Govt. of Telangana</p>
-          <p>Run by Doctors, Educationists & NRIs</p>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-          <h3 class="text-2xl font-bold text-orange-600 mb-4">Admission Details</h3>
-          <ul class="list-disc list-inside space-y-1">
-            <li>Admissions open from Nursery to Class X</li>
-            <li>No Donation, No Term Fee</li>
-            <li class="text-green-700 font-bold">Free Admission</li>
-            <li class="text-blue-700 font-bold">Free Uniform for First 100 Admissions</li>
-            <li>Free Health Consultant for Students and Parents</li>
-            <li>IIT/Medical Foundation Classes from Class 6 to 10</li>
-          </ul>
-        </div>
-
-        <div class="bg-white rounded-lg shadow-md p-6 mb-8">
-          <h3 class="text-2xl font-bold text-orange-600 mb-4">Highlights & Features</h3>
-          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 list-disc list-inside">
-            <li>Modern Education with Islamic Studies</li>
-            <li class="text-blue-700 font-semibold">Hifz Course for interested students</li>
-            <li>Deeniyath as subject from Class 1</li>
-            <li>Monthly Subject-wise Seminars</li>
-            <li>Digital Classes & AV Rooms</li>
-            <li>Well-qualified and experienced teachers</li>
-            <li>Low student-teacher ratio</li>
-            <li>Equal focus on academics and personality</li>
-            <li>Play-way method for early learning</li>
-            <li>Spoken English classes for parents</li>
-            <li>Monthly Parent-Teacher Meetings</li>
-            <li>Workshops on parenting</li>
-            <li>Educational Field Trips</li>
-            <li>Separate Namaz hall for boys & girls</li>
-            <li>Monthly Events & Competitions</li>
-            <li>CCE Method of Teaching</li>
-            <li>Summer Crash Courses</li>
-            <li>Free Computers, Spoken English, Deeniyath</li>
-            <li>Art & Craft</li>
-          </ul>
-          <p class="mt-4 italic text-sm">(Starts 1st May every year)</p>
-        </div>
-
-        <div class="text-center">
-          <a href="#contact" class="bg-orange-600 text-white px-6 py-3 text-lg font-semibold rounded hover:bg-orange-700">Apply Now</a>
-        </div>
+      <div class="text-center mt-8">
+        <button class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Apply Now</button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-12 px-6 md:px-20 bg-white">
-      <div class="max-w-xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-orange-700 mb-4">Contact Us</h2>
-        <div class="mb-6">
-          <h3 class="text-xl font-semibold mb-2">📍 Our Location on Google Maps</h3>
-          <div class="w-full h-96 rounded overflow-hidden shadow-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.054215712803!2d78.4621718!3d17.3649095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb975c2026dfcf%3A0x4e3b81062e4d71b3!2sLittle%20Flower%20High%20School!5e0!3m2!1sen!2sin!4v1680969320607!5m2!1sen!2sin"
-              width="100%"
-              height="100%"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <p class="mt-2 text-blue-600">
-            <a href="https://g.co/kgs/ENjG21H" target="_blank" class="underline">Check Our Google Reviews</a>
-          </p>
-        </div>
-        <p class="mb-2 text-4xl">📞 <a href="tel:+919347179694" class="text-black font-medium">+91 93471 79694</a></p>
-        <p class="mb-6 text-4xl">✉️ <a href="mailto:lfhsch2024@gmail.com" class="text-black font-medium">lfhsch2024@gmail.com</a></p>
-
-        <form class="space-y-4 text-left">
-          <input type="text" placeholder="Your Name" class="w-full border border-gray-300 p-2 rounded" required>
-          <input type="email" placeholder="Your Email" class="w-full border border-gray-300 p-2 rounded" required>
-          <textarea placeholder="Your Message" rows="4" class="w-full border border-gray-300 p-2 rounded" required></textarea>
-          <button type="submit" class="bg-orange-600 text-white px-6 py-2 rounded hover:bg-orange-700">Send Message</button>
-        </form>
+  <!-- Gallery Section -->
+  <section id="gallery" class="bg-orange-100 py-12 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-700 mb-6">Gallery</h2>
+      <div class="carousel relative w-full h-96 overflow-hidden">
+        <!-- Gallery Images -->
+        <img src="images/std1.jpg" class="absolute w-full h-full object-cover active" id="slide1">
+        <img src="images/std2.jpg" class="absolute w-full h-full object-cover" id="slide2">
+        <!-- Repeat until std16.jpg -->
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- Contact & Map -->
+  <section id="contact" class="py-12 px-6 md:px-20 bg-white">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-orange-700 mb-4">Contact Us</h2>
+      <p class="text-xl">📞 +91 93471 79694 | ✉️ lfhsch2024@gmail.com</p>
+      <form class="mt-6 space-y-4">
+        <input type="text" placeholder="Name" class="w-full border p-2 rounded">
+        <input type="email" placeholder="Email" class="w-full border p-2 rounded">
+        <textarea placeholder="Message" class="w-full border p-2 rounded"></textarea>
+        <button type="submit" class="bg-orange-600 text-white px-4 py-2 rounded">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Google Map -->
+  <section id="location" class="bg-gray-50 py-12 px-6 md:px-20">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-orange-700 mb-4 text-center">Our Location</h2>
+      <div class="h-96 rounded overflow-hidden shadow-lg">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      <p class="text-center mt-4"><a href="https://g.co/kgs/ENjG21H" target="_blank" class="text-blue-600 underline">Check Our Google Reviews</a></p>
+    </div>
+  </section>
 
   <!-- WhatsApp Floating Button -->
   <a href="https://wa.me/919347179694" class="whatsapp-float" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
   </a>
 
-  <!-- Footer with Site Counter -->
-  <footer class="bg-orange-600 text-white text-center py-6 mt-12">
+  <!-- Visitor Counter -->
+  <footer class="bg-orange-600 text-white text-center py-6">
     <p>&copy; 2025 Little Flower High School | Designed by Balkhis Web Solutions</p>
     <p class="mt-2 text-lg">Visitor Count: <span id="visitorCounter">900</span></p>
   </footer>
 
   <script>
+    // Auto Sliding Gallery
+    const slides = document.querySelectorAll('.carousel img');
+    let index = 0;
+    setInterval(() => {
+      slides.forEach((img, i) => img.classList.remove('active'));
+      slides[index].classList.add('active');
+      index = (index + 1) % slides.length;
+    }, 3000);
+
+    // Visitor Counter
     const counter = document.getElementById("visitorCounter");
     let count = localStorage.getItem("lfhsCounter") || 900;
     count++;
     localStorage.setItem("lfhsCounter", count);
     counter.textContent = count;
   </script>
-</body>
 
+</body>
 </html>
