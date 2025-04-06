@@ -2,84 +2,196 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Little Flower High School</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: url('images/school-background.jpg') no-repeat center center/cover;
-        }
-        header {
-            text-align: center;
-            padding: 40px 10px 10px;
-        }
-        .school-title {
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-        .dark-blue {
-            color: #002366;
-        }
-        .light-blue {
-            color: #4da6ff;
-        }
-        nav {
-            background-color: #002366;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .hero-section {
-            padding: 60px 20px;
-            color: white;
-            background: rgba(0, 0, 0, 0.5);
-            text-align: center;
-        }
-        footer {
-            background-color: #002366;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            margin-top: 50px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Little Flower High School</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      position: relative;
+    }
+    header .school-title {
+      font-size: 48px;
+      font-weight: bold;
+    }
+    .dark-blue { color: darkblue; }
+    .light-blue { color: lightblue; }
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .facilities, .features, .blog-posts, .gallery, .contact {
+      display: grid;
+      gap: 20px;
+    }
+    .facilities img, .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <div class="school-title">
-            <span class="dark-blue">LITTLE FLOWER</span> <span class="light-blue">HIGH SCHOOL</span>
-        </div>
-    </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#admissions">Admissions</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="admissions.html">Admissions</a>
-        <a href="facilities.html">Facilities</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <header>
+    <div class="school-title">
+      <span class="dark-blue">LITTLE FLOWER</span> <span class="light-blue">HIGH SCHOOL</span>
+    </div>
+  </header>
 
-    <section class="hero-section">
-        <h2>Welcome to Little Flower High School</h2>
-        <p>Providing quality education at affordable cost for underprivileged children since 2007.</p>
-    </section>
+  <section id="about" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>Established in 2007, Little Flower High School aims to provide high-quality education at low cost, focusing on underprivileged children who are eager to learn but lack access to facilities. While other schools charge heavily for computer labs, robotics, AI, sports, libraries, karate, and Islamic education — we provide all of them affordably. Our features include:</p>
+    <ul>
+      <li>Highly qualified teachers</li>
+      <li>Personal attention to children</li>
+      <li>Digital learning and spoken English</li>
+      <li>Monthly PTMs</li>
+      <li>Affordable fee structure</li>
+      <li>Soft skills programs</li>
+    </ul>
+  </section>
 
-    <footer>
-        &copy; 2025 Little Flower High School. All Rights Reserved.
-    </footer>
+  <section id="admissions" data-aos="fade-up">
+    <h2>Admissions</h2>
+    <p>Admissions are open for all grades. We welcome children from all backgrounds who are eager to learn. Scholarships are available for meritorious and needy students. Visit our campus or contact us for more details.</p>
+  </section>
+
+  <section id="facilities" class="facilities" data-aos="fade-up">
+    <h2>Our Facilities</h2>
+    <ul>
+      <li>Computer Labs with AI & Robotics</li>
+      <li>Islamic Education</li>
+      <li>Karate Coaching</li>
+      <li>Sports Ground</li>
+      <li>Library</li>
+      <li>Digital Classrooms</li>
+    </ul>
+  </section>
+
+  <section id="gallery" class="gallery" data-aos="fade-up">
+    <h2>Gallery</h2>
+    <img src="images/classroom.jpg" alt="Classroom">
+    <img src="images/computer-lab.jpg" alt="Computer Lab">
+    <img src="images/sports-ground.jpg" alt="Sports Ground">
+    <img src="images/library.jpg" alt="Library">
+    <img src="images/namaz.jpg" alt="Islamic Education">
+    <img src="images/low-cost.jpg" alt="Low Cost Education">
+  </section>
+
+  <section id="blog" class="blog-posts" data-aos="fade-up">
+    <h2>Our Blog</h2>
+    <article>
+      <h3>Haritha Haram - Green Drive (15th Nov 2024)</h3>
+      <p>On 15th Nov, we organized a plantation drive under Haritha Haram to promote environmental awareness. Students and teachers planted trees and pledged to protect the green cover.</p>
+    </article>
+    <article>
+      <h3>Why Education is Important</h3>
+      <p>In today's competitive world, education empowers individuals, opens up opportunities, and helps create a more equitable society. It's the foundation of progress.</p>
+    </article>
+    <article>
+      <h3>Role of Parents in Education</h3>
+      <p>Parents play a crucial role in the educational journey of children. From providing moral support to helping with studies, their involvement makes a huge impact.</p>
+    </article>
+  </section>
+
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> Dargah Pahad, Chintalmet, Hyderabad, Telangana, 500048</p>
+    <p><strong>Email:</strong> infoduaa@gmail.com</p>
+    <p><strong>Phone:</strong> +91-9502801171, +91-9989483293</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6515.818860934065!2d78.420585!3d17.347727!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb973f5faa8b0d%3A0xa057505e8fd4c493!2sDuaa%20The%20Global%20Schools!5e1!3m2!1sen!2sin!4v1686799337823!5m2!1sen!2sin"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 LITTLE FLOWER HIGH SCHOOL</p>
+    <div id="visitor-counter">
+      Site Visits: <span id="visitCount">900</span>
+    </div>
+  </footer>
+
+  <button id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    let visitCount = localStorage.getItem("visitCount") || 900;
+    visitCount++;
+    document.getElementById("visitCount").innerText = visitCount;
+    localStorage.setItem("visitCount", visitCount);
+
+    window.onscroll = () => {
+      document.getElementById("backToTop").style.display = window.scrollY > 200 ? 'block' : 'none';
+    }
+  </script>
 </body>
 
 </html>
