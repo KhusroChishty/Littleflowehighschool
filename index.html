@@ -71,25 +71,36 @@
 
 <!-- Header with Side Images -->
 <header class="bg-gradient-to-r from-emerald-400 to-sky-300 py-10 shadow-xl">
-  <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+  <div class="flex flex-col md:flex-row items-center justify-center gap-6 px-4">
     
-    <!-- Left Image -->
-    <img src="images/students.jpg" alt="Students Left" class="hidden md:block w-80 h-80 rounded-lg shadow-lg object-cover">
+    <!-- Left Image (only on md+) -->
+    <img src="images/students.jpg" alt="Students Left"
+      class="hidden md:block w-60 md:w-80 h-60 md:h-80 rounded-lg shadow-lg object-cover">
 
     <!-- Center Logo & Title -->
-    <div class="text-center">
-      <img src="images/logo1.png" alt="School Logo" class="mx-auto w-40 h-40 mb-4 object-cover rounded-full border-4 border-white shadow-lg">
-      <h1 class="text-8xl md:text-8xl font-bold flashing-text">
-        <span class="text-red-600 font-extrabold">LITTLE FLOWER</span> <span class="text-blue-800 font-extrabold">HIGH SCHOOL</span>
+    <div class="text-center max-w-lg">
+      <img src="images/logo1.png" alt="School Logo"
+        class="mx-auto w-28 sm:w-32 md:w-40 h-28 sm:h-32 md:h-40 mb-4 object-cover rounded-full border-4 border-white shadow-lg">
+      
+      <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-bold flashing-text leading-tight">
+        <span class="text-red-600 font-extrabold block">LITTLE FLOWER</span>
+        <span class="text-blue-800 font-extrabold block">HIGH SCHOOL</span>
       </h1>
-      <p class="text-xl font-semibold mt-2 text-red-600">Established: 2007 | Recognised by Govt. of Telangana</p>
-      <p class="text-lg italic text-red-600">Run by Doctors, Educationists & NRIs</p>
+      
+      <p class="text-sm sm:text-base md:text-xl font-semibold mt-2 text-red-600">
+        Established: 2007 | Recognised by Govt. of Telangana
+      </p>
+      <p class="text-sm sm:text-lg italic text-red-600">
+        Run by Doctors, Educationists & NRIs
+      </p>
     </div>
 
-    <!-- Right Image -->
-    <img src="images/students2.jpg" alt="Students Right" class="hidden md:block w-80 h-80 rounded-lg shadow-lg object-cover">
+    <!-- Right Image (only on md+) -->
+    <img src="images/students2.jpg" alt="Students Right"
+      class="hidden md:block w-60 md:w-80 h-60 md:h-80 rounded-lg shadow-lg object-cover">
   </div>
 </header>
+
 
 
   <!-- Director's Mission -->
