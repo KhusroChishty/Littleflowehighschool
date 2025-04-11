@@ -108,8 +108,8 @@
   <!-- Admissions Section -->
   <section id="admissions" class="bg-green-50 py-12 px-6 md:px-20">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold text-green-700 mb-6 text-center">Admissions 2025–26</h2>
-      <p class="text-center text-lg font-semibold mb-4">Admissions open from Nursery to Class X | No Donation | Free Admission</p>
+      <h2 class="text-6xl font-bold text-green-700 mb-6 text-center">Admissions 2025–26</h2>
+      <p class="text-center text-xl font-bold mb-4">Admissions open from Nursery to Class X | No Donation | Free Admission</p>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <ul class="space-y-2 text-gray-800">
           <li>✅ Free Uniform for First 100 Admissions</li>
@@ -219,10 +219,40 @@
 
 
 
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/919347179694" class="whatsapp-float" target="_blank">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
-  </a>
+ <!-- WhatsApp Floating Button -->
+<a href="https://wa.me/919347179694" class="whatsapp-float" target="_blank">
+  <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" />
+</a>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    animation: pulseGlow 2s infinite;
+    transition: transform 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.15);
+  }
+
+  @keyframes pulseGlow {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px 10px rgba(37, 211, 102, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+</style>
 
   <!-- Visitor Counter -->
   <footer class="bg-orange-600 text-white text-center py-6">
